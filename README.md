@@ -79,52 +79,70 @@ Windows PowerShell:
 
 ### Bootstrap a project
 
-Copy the relevant stack preset and skills into your project. See `scripts/install-project.sh` or `scripts/install-project.ps1`.
-
-Example:
+Linux/macOS:
 
 ```bash
 ./scripts/install-project.sh laravel-nextjs /path/to/project
 ```
 
-Then your project can contain:
+Windows PowerShell:
 
-```text
-AGENTS.md
-.cursor/
-  rules/
-  skills/
+```powershell
+.\scripts\install-project.ps1 -Stack laravel-nextjs -ProjectPath C:\path\to\project
 ```
 
-## Included capabilities
+Supported stack presets:
 
-- Codebase analysis
-- Specification and acceptance criteria
-- Planning and task decomposition
-- Incremental implementation
-- Frontend/UI engineering
-- API design and integration
-- Database design
-- Laravel engineering
-- Next.js engineering
-- Testing and TDD
-- Debugging
-- Security review
-- Code review
-- Git and PR workflow
-- Documentation
-- Deployment and production verification
+- `laravel`
+- `nextjs`
+- `laravel-nextjs`
+- `nextjs-supabase`
 
-## Stack presets
+The project installer copies reusable skills and Cursor rules, generates stack-aware agent instructions, and adds project/architecture/security/PR templates without overwriting existing project documentation. If `AGENTS.md` already exists, it creates `AGENTS.toolkit.md` for manual merging instead.
 
-- Laravel
-- Next.js
-- Laravel + Next.js
-- Next.js + Supabase
+## Included skills
+
+### Engineering process
+- `codebase-analysis`
+- `specification`
+- `planning`
+- `incremental-implementation`
+- `testing`
+- `tdd`
+- `browser-testing`
+- `debugging`
+- `code-review`
+- `git-workflow`
+- `documentation`
+
+### Architecture and implementation
+- `frontend-design`
+- `api-design`
+- `swagger-openapi`
+- `database-design`
+- `authentication`
+- `laravel`
+- `nextjs`
+
+### Production quality
+- `security-review`
+- `performance`
+- `ci-cd`
+- `observability`
+- `deployment`
+
+## Workflows
+
+- Full development cycle
+- Feature development
+- Bug fixing
+- UI redesign
+- API integration
+- Production release
 
 ## Upstream skills
 
-This repository contains original PHENOMVALENCE workflow instructions and can also reference external agent-skill collections. External skills should be reviewed before installation. See `sources/UPSTREAM.md`.
+This repository contains original PHENOMVALENCE workflow instructions and also tracks external agent-skill collections from Anthropic, Vercel Labs, Supabase, Laravel, and GitHub. External skills should be reviewed before installation. See `sources/UPSTREAM.md` and `skills-sources.yml`.
 
 ## Engineering principle
 
