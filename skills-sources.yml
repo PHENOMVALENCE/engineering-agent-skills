@@ -1,0 +1,23 @@
+collections:
+  anthropic:
+    repository: https://github.com/anthropics/skills
+    trust: upstream-vendor
+  vercel:
+    repository: https://github.com/vercel-labs/agent-skills
+    trust: upstream-vendor
+  supabase:
+    repository: https://github.com/supabase/agent-skills
+    trust: upstream-vendor
+  laravel:
+    repository: https://github.com/laravel/agent-skills
+    trust: upstream-vendor
+  github:
+    repository: https://github.com/github/awesome-copilot
+    trust: upstream-community-curated
+
+policy:
+  - review_skill_before_install
+  - review_bundled_scripts
+  - verify_license
+  - never_expose_secrets
+  - keep_project_agents_rules_authoritative
