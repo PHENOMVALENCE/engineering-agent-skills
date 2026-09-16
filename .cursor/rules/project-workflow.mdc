@@ -1,0 +1,23 @@
+---
+description: Standard workflow for feature, fix, refactor, and integration work
+globs:
+alwaysApply: true
+---
+
+# Project Workflow
+
+For significant work, follow this order:
+
+1. Understand the codebase and relevant subsystem.
+2. State assumptions and acceptance criteria.
+3. Produce a short implementation plan.
+4. Confirm or create a non-default working branch.
+5. Implement one coherent change at a time.
+6. Run focused tests after each meaningful milestone.
+7. Run broader verification before completion.
+8. Perform security and quality review.
+9. Update docs where needed.
+10. Review the final diff.
+11. Open a PR with clear summary, verification, risks, and screenshots for UI changes.
+
+Do not skip directly from request to large-scale edits when the repository can first be inspected.
