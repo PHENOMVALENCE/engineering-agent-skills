@@ -1,0 +1,19 @@
+---
+description: Global engineering standards for PHENOMVALENCE projects
+globs:
+alwaysApply: true
+---
+
+# Engineering Standards
+
+- Inspect the repository before editing.
+- Follow existing architecture and conventions unless there is a documented reason to change them.
+- Prefer small, coherent, testable changes.
+- Never commit secrets or production credentials.
+- Preserve backward compatibility unless a breaking change is explicitly approved.
+- Validate external input and enforce authorization server-side.
+- Add or update tests for changed behavior where practical.
+- Run relevant lint, type, test, and build checks before completion.
+- Update documentation when behavior, setup, API contracts, or architecture changes.
+- Review the final diff for unrelated changes, debug code, generated noise, and regressions.
+- Do not add AI co-author attribution unless explicitly requested.
